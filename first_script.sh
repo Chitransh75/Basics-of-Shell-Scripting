@@ -3,7 +3,7 @@
 # How to Create Your First Bash Script.
 
 
-#Let's create a simple script in bash that outputs Hello World.
+#Let's create a simple script in bash that outputs "Hello, this is my first script" .
 
 #Create a file named "frist_script.sh"
 
