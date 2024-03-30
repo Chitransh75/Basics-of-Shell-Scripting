@@ -1,0 +1,45 @@
+ 
+# How to Automate Scripts by Scheduling via cron Jobs :----------------------
+
+Cron is a job scheduling utility present in Unix like systems. 
+You can schedule jobs to execute daily, weekly, monthly or in a specific time of the day.
+
+# Cron job example :--------------------------------------------------------
+* * * * * sh /path/to/script.sh
+Here, * represents minute(s) hour(s) day(s) month(s) weekday(s), respectively.
+
+Below are some examples of scheduling cron jobs.
+
+SCHEDULE	SCHEDULED VALUE
+5 0 * 8 *	At 00:05 in August.
+5 4 * * 6	At 04:05 on Saturday.
+0 22 * * 1-5	At 22:00 on every day-of-week from Monday through Friday.
+
+# Cron job syntax :--------------------------------------------------------
+1. crontab -e:-----------------edits crontab entries to add, delete, or edit cron jobs.
+2. crontab -l:-----------------list all the cron jobs for the current user.
+3. crontab -u username -l:-----list another user's crons.
+4. crontab -u username -e:-----edit another user's crons.
+5. crontab -r:-----------------for removes all your cron jobs.
+
+# Using special strings for convenience :----------------------------------
+ex:---
+" @reboot /home/username/myscripts.sh "
+                        -------------
+                          file name
+
+@reboot string tells linux to execute myscripts.sh every time, system boots up...  
+-------                               ------------
+
+# "at" command :-----------------------------------------------------------
+
+The 'at' command
+e.g :---
+" echo "/home/username/myscripts.sh" | at 17:30
+
+"Execute myscripts.sh at 17:30 server time today"
+                                           -----
+NOTE:----
+
+"It's not suitable for tasks that need to run on a regular schedule"....
+
