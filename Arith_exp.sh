@@ -33,7 +33,7 @@ echo "scale=2;5/3" | bc
 echo 5 k 5 3 / p | dc
 
 # k = define how many number after decimal.
-
+# p = print
 # dc = desk calculator.
 
 # 3.  “awk” Command..................................
